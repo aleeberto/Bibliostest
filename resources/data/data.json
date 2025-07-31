@@ -1,0 +1,117 @@
+{
+    "media": [
+      {
+        "type": "Film",
+        "titolo": "Il Signore degli Anelli: La Compagnia dell'Anello",
+        "anno": 2001,
+        "immagine": "../resources/img/lotr1.jpg",
+        "regista": "Peter Jackson",
+        "attoreProtagonista": "Elijah Wood",
+        "durata": 178
+      },
+      {
+        "type": "Film",
+        "titolo": "Il Signore degli Anelli: Le Due Torri",
+        "anno": 2002,
+        "immagine": "../resources/img/lotr2.jpg",
+        "regista": "Peter Jackson",
+        "attoreProtagonista": "Elijah Wood",
+        "durata": 179
+      },
+      {
+        "type": "Film",
+        "titolo": "Il Signore degli Anelli: Il Ritorno del Re",
+        "anno": 2003,
+        "immagine": "../resources/img/lotr3.jpg",
+        "regista": "Peter Jackson",
+        "attoreProtagonista": "Elijah Wood",
+        "durata": 201
+      },
+      {
+        "type": "Manga",
+        "titolo": "Attack on Titan",
+        "anno": 2009,
+        "immagine": "../resources/img/aot.jpg",
+        "scrittore": "Hajime Isayama",
+        "illustratore": "Hajime Isayama",
+        "numLibri": 34,
+        "concluso": true
+      },
+      {
+        "type": "Manga",
+        "titolo": "Naruto",
+        "anno": 1999,
+        "immagine": "../resources/img/naruto.jpg",
+        "scrittore": "Masashi Kishimoto",
+        "illustratore": "Masashi Kishimoto",
+        "numLibri": 72,
+        "concluso": true
+      },
+      {
+        "type": "Anime",
+        "titolo": "Dragon Ball",
+        "anno": 1986,
+        "immagine": "../resources/img/dragonball.jpg",
+        "numEpisodi": 153,
+        "numStagioni": 5,
+        "durataMediaEp": 24,
+        "inCorso": false,
+        "disegnatore": "Akira Toriyama",
+        "studioAnimazione": "Toei Animation"
+      },
+      {
+        "type": "Anime",
+        "titolo": "Death Note",
+        "anno": 2006,
+        "immagine": "../resources/img/deathnote.jpg",
+        "numEpisodi": 37,
+        "numStagioni": 1,
+        "durataMediaEp": 23,
+        "inCorso": false,
+        "disegnatore": "Takeshi Obata",
+        "studioAnimazione": "Madhouse"
+      },
+      {
+        "type": "Serie Tv",
+        "titolo": "The Office",
+        "anno": 2005,
+        "immagine": "../resources/img/office.jpg",
+        "numEpisodi": 201,
+        "numStagioni": 9,
+        "durataMediaEp": 22,
+        "inCorso": false,
+        "ideatore": "Greg Daniels",
+        "casaProduttrice": "NBC Universal Television"
+      },
+      {
+        "type": "Serie Tv",
+        "titolo": "The Witcher",
+        "anno": 2019,
+        "immagine": "../resources/img/witcher.jpg",
+        "numEpisodi": 24,
+        "numStagioni": 3,
+        "durataMediaEp": 60,
+        "inCorso": true,
+        "ideatore": "Lauren Schmidt Hissrich",
+        "casaProduttrice": "Netflix"
+      },
+      {
+        "type": "Libro",
+        "titolo": "Ghost in the Wires",
+        "anno": 2011,
+        "immagine": "../resources/img/ghost.jpg",
+        "scrittore": "Kevin Mitnick",
+        "annoStampa": 2011,
+        "casaEditrice": "Apple Inc"
+      },
+      {
+        "type": "Libro",
+        "titolo": "Il Silmarillion",
+        "anno": 1977,
+        "immagine": "../resources/img/silmarillion.jpg",
+        "scrittore": "J.R.R. Tolkien",
+        "annoStampa": 1997,
+        "casaEditrice": "Bompiani"
+      }
+    ]
+  }
