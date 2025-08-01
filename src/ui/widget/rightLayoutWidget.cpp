@@ -1,4 +1,6 @@
 #include "rightLayoutWidget.h"
+#include "../../utils/styleUtils.h"
+
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -155,36 +157,19 @@ void RightLayoutWidget::addMediaCardToLayout(Media* media)
     buttonsLayout->setSpacing(10);
 
     // Edit button
-    QPushButton *editButton = new QPushButton("Modifica");
-    editButton->setFixedHeight(35);
-    editButton->setFixedWidth(80);
-    editButton->setStyleSheet(
-        "QPushButton {"
-        "  background-color: #2196F3;"
-        "  color: white;"
-        "  border: none;"
-        "  border-radius: 5px;"
-        "  font-weight: bold;"
-        "}"
-        "QPushButton:hover { background-color: #1976D2; }"
-        "QPushButton:pressed { background-color: #1565C0; }"
-    );
+    QPushButton *editButton = new QPushButton(this);
+    editButton->setFixedHeight(44);
+    editButton->setToolTip("Modifica questo elemento");
+    editButton->setIcon(QIcon("../resources/icon/edit.png"));
+    editButton->setStyleSheet(StyleUtils::getItemButtonStyle());
+
 
     // Delete button
-    QPushButton *deleteButton = new QPushButton("Elimina");
-    deleteButton->setFixedHeight(35);
-    deleteButton->setFixedWidth(80);
-    deleteButton->setStyleSheet(
-        "QPushButton {"
-        "  background-color: #f44336;"
-        "  color: white;"
-        "  border: none;"
-        "  border-radius: 5px;"
-        "  font-weight: bold;"
-        "}"
-        "QPushButton:hover { background-color: #d32f2f; }"
-        "QPushButton:pressed { background-color: #c62828; }"
-    );
+    QPushButton *deleteButton = new QPushButton(this);
+    deleteButton->setFixedHeight(44);
+    deleteButton->setToolTip("Elimina questo elemento");
+    deleteButton->setIcon(QIcon("../resources/icon/delete.png"));
+    deleteButton->setStyleSheet(StyleUtils::getItemButtonStyle());
 
     buttonsLayout->addWidget(editButton);
     buttonsLayout->addWidget(deleteButton);

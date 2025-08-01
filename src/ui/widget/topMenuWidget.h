@@ -12,6 +12,7 @@ public:
 signals:
     void uploadRequested();  // Carica un file JSON esistente
     void exportRequested();  // Esporta i dati in un nuovo file JSON
+    void closeRequested();   // Chiude la finestra corrente
     void createRequested();  // Crea un nuovo media
 };
 

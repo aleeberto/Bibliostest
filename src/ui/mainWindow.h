@@ -45,7 +45,7 @@ private:
     MediaService *mediaService;
     UIService *uiService;
     QMap<QString, QPushButton*> categoryButtons;
-    QString currentJsonPath = "resources/data/data.json";
+    QString currentJsonPath = "../resources/data/data.json";
     QString currentCategory = "Tutti";
     QLineEdit *searchBar;
 };

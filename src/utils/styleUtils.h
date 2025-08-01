@@ -8,10 +8,11 @@ class StyleUtils
 public:
     // Stili per pulsanti
     static QString getPrimaryButtonStyle();
-    static QString getSecondaryButtonStyle();
+    static QString getTopButtonStyle();
     static QString getDangerButtonStyle();
     static QString getWarningButtonStyle();
     static QString getIconButtonStyle();
+    static QString getItemButtonStyle();
     
     // Stili per input
     static QString getLineEditStyle();

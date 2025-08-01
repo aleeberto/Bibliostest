@@ -6,19 +6,22 @@ Project for the course "Programmazione ad Oggetti"
 
 BibliothecaProcurator/
 │
-├── resources/              # Codice sorgente C++
-│   ├── data/         # Logica applicativa, modelli, classi principali
-│   ├── icon/     # Servizi, interfacce verso l'esterno, utility
-│   └── img/           # Gestione interfaccia grafica (GUI)
+├── resources/
+│   ├── data/
+│   ├── icon/
+│   └── img/
 │
-├── src/          # Header files (*.h / *.hpp)
+├── src/
 │   ├── services/
 │   ├── logic/
-│   └── ui/
+│   ├── utils/
+│   ├── ui/
+│   └── main.cpp
 │
-├── main.cpp
-├── Makefile
-├── BibliothecaProcurator.pro    # File di build (se usi CMake)
+├── build/
+├── .gitignore
+├── BibliothecaProcurator.pro
+├── build.sh
 └── README.md        
 
 ###

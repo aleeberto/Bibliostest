@@ -26,11 +26,9 @@ QString StyleUtils::getPrimaryButtonStyle()
         "}"
         "QPushButton:hover {"
         "  background-color: #1d4ed8;"
-        "  transform: translateY(-1px);"
         "}"
         "QPushButton:pressed {"
         "  background-color: #1e40af;"
-        "  transform: translateY(0px);"
         "}"
         "QPushButton:disabled {"
         "  background-color: #cbd5e1;"
@@ -39,7 +37,7 @@ QString StyleUtils::getPrimaryButtonStyle()
     ).arg(getPrimaryColor());
 }
 
-QString StyleUtils::getSecondaryButtonStyle()
+QString StyleUtils::getTopButtonStyle()
 {
     return QString(
         "QPushButton {"
@@ -48,8 +46,29 @@ QString StyleUtils::getSecondaryButtonStyle()
         "  border: 2px solid %2;"
         "  border-radius: 8px;"
         "  padding: 10px 22px;"
-        "  font-weight: 600;"
-        "  font-size: 14px;"
+
+        "  min-height: 20px;"
+        "}"
+        "QPushButton:hover {"
+        "  background-color: %3;"
+        "  color: %4;"
+        "}"
+        "QPushButton:pressed {"
+        "  background-color: %5;"
+        "}"
+    ).arg(getSecondaryColor(), getBorderColor(), getSurfaceColor(), getTextColor(), getBorderColor());
+}
+
+QString StyleUtils::getItemButtonStyle()
+{
+    return QString(
+        "QPushButton {"
+        "  background-color: transparent;"
+        "  color: %1;"
+        "  border: 2px solid %2;"
+        "  border-radius: 8px;"
+        "  padding: 10px 22px;"
+
         "  min-height: 20px;"
         "}"
         "QPushButton:hover {"
@@ -120,11 +139,9 @@ QString StyleUtils::getIconButtonStyle()
         "QPushButton:hover {"
         "  background-color: %3;"
         "  border-color: %4;"
-        "  transform: translateY(-1px);"
         "}"
         "QPushButton:pressed {"
         "  background-color: %5;"
-        "  transform: translateY(0px);"
         "}"
     ).arg(getBackgroundColor(), getBorderColor(), getSurfaceColor(), getSecondaryColor(), getBorderColor());
 }

@@ -73,7 +73,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     rightLayoutWidget->setUIService(uiService);
 
     // Set minimum window size
-    setMinimumSize(900, 600);
+    setMinimumSize(1150, 600);
 
     // Create item widget (hidden by default)
     createItemWidget = new CreateItemWidget(this);
@@ -162,7 +162,7 @@ void MainWindow::setupCategoryButtons()
 void MainWindow::setupSearchBar()
 {
     searchBar = new QLineEdit();
-    searchBar->setPlaceholderText("🔍 Cerca per titolo...");
+    searchBar->setPlaceholderText("Cerca per titolo...");
     searchBar->setClearButtonEnabled(true);
     searchBar->setStyleSheet(StyleUtils::getSearchBarStyle());
     searchBar->setFixedHeight(44);

@@ -1,4 +1,2 @@
 build/
-BibliothrecaProcurator.pro
-*.o
-user-workspace.pro
+run.sh
