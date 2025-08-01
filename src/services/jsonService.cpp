@@ -91,9 +91,6 @@ void JsonService::clearAll() {
     mediaArray = QJsonArray();
 }
 
-QString JsonService::getMediaTypeName(Media* media) const {
-    return MediaTypeUtils::getMediaTypeName(media);
-}
 
 Media* JsonService::jsonToMedia(const QJsonObject &jsonObj) const {
     std::string titolo = jsonObj["titolo"].toString().toStdString();

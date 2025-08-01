@@ -10,8 +10,8 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QCoreApplication>
-#include "../utils/styleUtils.h"
-#include "../utils/mediaTypeUtils.h"
+#include "../services/styleUtils.h"
+#include "../services/mediaTypeUtils.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {

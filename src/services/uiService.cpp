@@ -31,7 +31,7 @@ QString UIService::formatMediaYear(Media* media) const
 QString UIService::formatMediaType(Media* media) const
 {
     if (!media) return "";
-    return "Tipo: " + getMediaTypeName(media);
+    return "Tipo: " + MediaTypeUtils::getMediaTypeName(media);
 }
 
 QStringList UIService::formatMediaDetails(Media* media) const
@@ -119,10 +119,6 @@ QPixmap UIService::createImagePlaceholder(const std::string& originalPath) const
     return pixmap;
 }
 
-QString UIService::getMediaTypeName(Media* media) const
-{
-    return MediaTypeUtils::getMediaTypeName(media);
-}
 
 QString UIService::formatBooleanValue(bool value, const QString& trueText, const QString& falseText) const
 {

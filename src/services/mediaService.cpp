@@ -132,7 +132,7 @@ QVector<Media*> MediaService::filterByCategory(const QString& category) const
     
     QVector<Media*> filtered;
     for (Media* media : mediaCollection) {
-        QString mediaType = getMediaTypeName(media);
+        QString mediaType = MediaTypeUtils::getMediaTypeName(media);
         if (mediaType == category) {
             filtered.append(media);
         }
@@ -172,11 +172,6 @@ QVector<Media*> MediaService::filterByCategoryAndSearch(const QString& category,
         }
     }
     return filtered;
-}
-
-QString MediaService::getMediaTypeName(Media* media) const
-{
-    return MediaTypeUtils::getMediaTypeName(media);
 }
 
 int MediaService::getMediaCount() const

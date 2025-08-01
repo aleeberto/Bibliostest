@@ -5,7 +5,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include "../logic/media.h"
-#include "../utils/mediaTypeUtils.h"
+#include "mediaTypeUtils.h"
 
 class JsonService : public QObject
 {
@@ -22,8 +22,6 @@ public:
     Media* findMedia(const QString &title) const;
     void clearAll();
     
-    QString getMediaTypeName(Media* media) const;
-
 private:
     QJsonArray mediaArray;
     

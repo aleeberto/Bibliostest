@@ -5,7 +5,7 @@
 #include <QDir>
 #include <QTimer>
 #include <QAbstractScrollArea>
-#include "../../utils/styleUtils.h"
+#include "../../services/styleUtils.h"
 
 CreateItemWidget::CreateItemWidget(QWidget *parent) : QWidget(parent), editingMedia(nullptr), editMode(false), mediaService(nullptr)
 {
@@ -275,17 +275,13 @@ bool CreateItemWidget::isInEditMode() const
     return editMode;
 }
 
-QString CreateItemWidget::getMediaTypeName(Media* media) const
-{
-    return MediaTypeUtils::getMediaTypeName(media);
-}
 
 void CreateItemWidget::populateFieldsFromMedia(Media* media)
 {
     if (!media) return;
     
     // Determina il tipo di media e seleziona il combo box appropriato
-    QString mediaType = getMediaTypeName(media);
+    QString mediaType = MediaTypeUtils::getMediaTypeName(media);
     int typeIndex = itemTypeCombo->findText(mediaType);
     if (typeIndex != -1) {
         itemTypeCombo->setCurrentIndex(typeIndex);

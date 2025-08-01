@@ -6,7 +6,7 @@
 #include <QStringList>
 #include <QPixmap>
 #include "../logic/media.h"
-#include "../utils/mediaTypeUtils.h"
+#include "mediaTypeUtils.h"
 
 class UIService : public QObject
 {
@@ -26,7 +26,6 @@ public:
     QPixmap createImagePlaceholder(const std::string& originalPath) const;
     
     // Utility per UI
-    QString getMediaTypeName(Media* media) const;
     QString formatBooleanValue(bool value, const QString& trueText = "true", const QString& falseText = "false") const;
     QString formatDuration(int minutes, const QString& unit = "min") const;
     QString formatNumber(int number) const;

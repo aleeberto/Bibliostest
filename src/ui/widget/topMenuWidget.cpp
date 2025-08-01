@@ -1,6 +1,6 @@
 #include "topMenuWidget.h"
 #include <QHBoxLayout>
-#include "../../utils/styleUtils.h"
+#include "../../services/styleUtils.h"
 
 TopMenuWidget::TopMenuWidget(QWidget* parent) : QWidget(parent) {
     QHBoxLayout* layout = new QHBoxLayout(this);

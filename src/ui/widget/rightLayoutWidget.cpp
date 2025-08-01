@@ -1,5 +1,6 @@
 #include "rightLayoutWidget.h"
-#include "../../utils/styleUtils.h"
+#include "../../services/styleUtils.h"
+#include "../../services/mediaTypeUtils.h"
 
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -50,8 +51,7 @@ void RightLayoutWidget::displayMediaByCategory(const QString &category, const QS
     clearLayout();
 
     for (Media* media : mediaCollection) {
-        QString mediaType = uiService ? uiService->getMediaTypeName(media) : 
-                           (jsonService ? jsonService->getMediaTypeName(media) : "");
+        QString mediaType = MediaTypeUtils::getMediaTypeName(media);
         QString mediaTitle = QString::fromStdString(media->getTitolo()).toLower();
 
         if ((category == "Tutti" || mediaType == category) &&

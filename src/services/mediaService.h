@@ -9,7 +9,7 @@
 #include <QWidget>
 #include <QMessageBox>
 #include "../logic/media.h"
-#include "../utils/mediaTypeUtils.h"
+#include "mediaTypeUtils.h"
 #include "jsonService.h"
 
 class MediaService : public QObject
@@ -42,7 +42,6 @@ public:
     QVector<Media*> filterByCategoryAndSearch(const QString& category, const QString& searchText) const;
 
     // Utility
-    QString getMediaTypeName(Media* media) const;
     int getMediaCount() const;
     bool isEmpty() const;
 
