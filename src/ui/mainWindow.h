@@ -30,6 +30,7 @@ private slots:
     void onMediaDeleteRequested(Media* media);
     void handleUploadRequest();
     void handleExportRequest();
+    void handleCloseRequest();
     void onSearchTextChanged(const QString& text);
 
 private:

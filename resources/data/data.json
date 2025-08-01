@@ -120,7 +120,7 @@
             "immagine": "/app/app/resources/img/silmarillion.jpg",
             "scrittore": "J. R. R. Tolkien",
             "titolo": "Il Silmarillion",
-            "type": "Libri"
+            "type": "Libro"
         },
         {
             "anno": 2012,
@@ -129,7 +129,7 @@
             "immagine": "/app/app/resources/img/ghost.jpg",
             "scrittore": "Kevin Mitnick",
             "titolo": "Ghost in the wires",
-            "type": "Libri"
+            "type": "Libro"
         }
     ]
 }

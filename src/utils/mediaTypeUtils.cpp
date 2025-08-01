@@ -13,7 +13,7 @@ QString MediaTypeUtils::getMediaTypeName(Media* media)
     if (dynamic_cast<Film*>(media)) return "Film";
     if (dynamic_cast<SerieTv*>(media)) return "Serie Tv";
     if (dynamic_cast<Anime*>(media)) return "Anime";
-    if (dynamic_cast<Libro*>(media)) return "Libri";
+    if (dynamic_cast<Libro*>(media)) return "Libro";
     if (dynamic_cast<Manga*>(media)) return "Manga";
     if (dynamic_cast<Cd*>(media)) return "Cd";
     

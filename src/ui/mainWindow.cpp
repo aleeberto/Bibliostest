@@ -90,6 +90,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(topMenu, &TopMenuWidget::uploadRequested, this, &MainWindow::handleUploadRequest);
     connect(topMenu, &TopMenuWidget::createRequested, this, &MainWindow::showCreateItemWidget);
     connect(topMenu, &TopMenuWidget::exportRequested, this, &MainWindow::handleExportRequest);
+    connect(topMenu, &TopMenuWidget::closeRequested, this, &MainWindow::handleCloseRequest);
     connect(createItemWidget, &CreateItemWidget::itemCreated, this, &MainWindow::onMediaItemCreated);
     connect(createItemWidget, &CreateItemWidget::itemUpdated, this, &MainWindow::onMediaItemUpdated);
     connect(rightLayoutWidget, &RightLayoutWidget::mediaEditRequested, this, &MainWindow::onMediaEditRequested);
@@ -105,7 +106,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::setupCategoryButtons()
 {
-    QStringList categories = {"Tutti", "Film", "Serie Tv", "Anime", "Libri", "Manga", "Cd"};
+    QStringList categories = {"Tutti", "Film", "Serie Tv", "Anime", "Libro", "Manga", "Cd"};
 
     for (const QString &category : categories) {
         QPushButton *btn = new QPushButton(category);
@@ -357,5 +358,42 @@ void MainWindow::onMediaItemUpdated(Media* oldMedia, Media* newMedia)
                 "Impossibile salvare le modifiche.\n"
                 "Il media è stato aggiornato nella visualizzazione ma potrebbe non essere salvato permanentemente.");
         }
+    }
+}
+
+void MainWindow::handleCloseRequest()
+{
+    // Chiedi conferma all'utente prima di chiudere
+    QMessageBox::StandardButton reply = QMessageBox::question(
+        this,
+        "Chiudi Biblioteca",
+        "Sei sicuro di voler chiudere la biblioteca corrente?\n\nTutti i dati non salvati andranno persi.",
+        QMessageBox::Yes | QMessageBox::No,
+        QMessageBox::No
+    );
+    
+    if (reply == QMessageBox::Yes) {
+        // Pulisci tutti i dati
+        mediaService->clearMediaCollection();
+        
+        // Resetta il percorso del file corrente
+        currentJsonPath = "";
+        
+        // Resetta la categoria corrente
+        currentCategory = "Tutti";
+        
+        // Pulisci la barra di ricerca
+        searchBar->clear();
+        
+        // Resetta i pulsanti delle categorie
+        for (auto it = categoryButtons.begin(); it != categoryButtons.end(); ++it) {
+            it.value()->setChecked(it.key() == "Tutti");
+        }
+        
+        // Pulisci la visualizzazione
+        rightLayoutWidget->setMediaCollection(QVector<Media*>());
+        rightLayoutWidget->displayMediaByCategory("Tutti", "");
+        
+        QMessageBox::information(this, "Biblioteca Chiusa", "La biblioteca è stata chiusa correttamente.");
     }
 }

@@ -33,7 +33,7 @@ CreateItemWidget::CreateItemWidget(QWidget *parent) : QWidget(parent), editingMe
         {"Serie Tv", {"Numero Episodi", "Numero Stagioni", "Durata Media Episodio (min)", "In Corso (true/false)", "Ideatore", "Casa produttrice"}},
         {"Anime", {"Numero Episodi", "Numero Stagioni", "Durata Media Episodio (min)", "In Corso (true/false)", "Disegnatore", "Studio Animazione"}},
         {"Film", {"Regista", "Attore protagonista", "Durata (min)"}},
-        {"Libri", {"Scrittore", "Anno di stampa", "Casa Editrice"}},
+        {"Libro", {"Scrittore", "Anno di stampa", "Casa Editrice"}},
         {"Manga", {"Scrittore", "Numero Libri", "Illustratore", "Concluso (true/false)"}},
         {"Cd", {"Artista", "Numero Tracce", "Durata Media Tracce (sec)"}}
     };

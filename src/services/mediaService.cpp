@@ -261,7 +261,7 @@ Media* MediaService::createMediaFromFields(const QString& type, const QList<QLin
                 fields[5]->text().toInt()
             );
         }
-        else if (type == "Libri") {
+        else if (type == "Libro") {
             return new Libro(
                 fields[0]->text().toStdString(),
                 fields[2]->text().toInt(),

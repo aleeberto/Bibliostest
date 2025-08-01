@@ -166,7 +166,7 @@ QJsonObject JsonService::mediaToJson(Media *media) const {
     if (dynamic_cast<Film*>(media)) jsonObj["type"] = "Film";
     else if (dynamic_cast<SerieTv*>(media)) jsonObj["type"] = "Serie Tv";
     else if (dynamic_cast<Anime*>(media)) jsonObj["type"] = "Anime";
-    else if (dynamic_cast<Libro*>(media)) jsonObj["type"] = "Libri";
+    else if (dynamic_cast<Libro*>(media)) jsonObj["type"] = "Libro";
     else if (dynamic_cast<Manga*>(media)) jsonObj["type"] = "Manga";
     else if (dynamic_cast<Cd*>(media)) jsonObj["type"] = "Cd";
     else jsonObj["type"] = "Altro";
